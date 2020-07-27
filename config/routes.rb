@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'api/v1/investment' => 'api/v1/investment#show'
+
+  post 'api/v1/wallet' => 'api/v1/wallet#create'
+  get 'api/v1/wallet' => 'api/v1/wallet#index'
 end

@@ -1,0 +1,129 @@
+{
+  "data": {
+    "actions": {
+      "AAPL": {
+        "open": 363.95,
+        "high": 371.88,
+        "low": 356.58,
+        "close": 370.46,
+        "volume": 46359716.0,
+        "adj_high": 371.88,
+        "adj_low": 356.58,
+        "adj_close": 370.46,
+        "adj_open": 363.95,
+        "adj_volume": 46359716.0,
+        "symbol": "AAPL",
+        "exchange": "XNAS",
+        "date": "2020-07-24T00:00:00+0000"
+      },
+      "IBM": {
+        "open": 126.48,
+        "high": 127.6459,
+        "low": 125.5,
+        "close": 125.79,
+        "volume": 3531076.0,
+        "adj_high": 127.6459,
+        "adj_low": 125.5,
+        "adj_close": 125.79,
+        "adj_open": 126.48,
+        "adj_volume": 3531076.0,
+        "symbol": "IBM",
+        "exchange": "XNYS",
+        "date": "2020-07-24T00:00:00+0000"
+      },
+      "PBR": {
+        "open": 8.98,
+        "high": 9.135,
+        "low": 8.79,
+        "close": 9.0,
+        "volume": 16933409.0,
+        "adj_high": 9.135,
+        "adj_low": 8.79,
+        "adj_close": 9.0,
+        "adj_open": 8.98,
+        "adj_volume": 16933409.0,
+        "symbol": "PBR",
+        "exchange": "XNYS",
+        "date": "2020-07-24T00:00:00+0000"
+      },
+      "AMZN": {
+        "open": 2930.0,
+        "high": 3031.58,
+        "low": 2888.0,
+        "close": 3008.91,
+        "volume": 5632413.0,
+        "adj_high": 3031.58,
+        "adj_low": 2888.0,
+        "adj_close": 3008.91,
+        "adj_open": 2930.0,
+        "adj_volume": 5632413.0,
+        "symbol": "AMZN",
+        "exchange": "XNAS",
+        "date": "2020-07-24T00:00:00+0000"
+      },
+      "MSFT": {
+        "open": 200.42,
+        "high": 202.86,
+        "low": 197.51,
+        "close": 201.3,
+        "volume": 39826989.0,
+        "adj_high": 202.86,
+        "adj_low": 197.51,
+        "adj_close": 201.3,
+        "adj_open": 200.42,
+        "adj_volume": 39826989.0,
+        "symbol": "MSFT",
+        "exchange": "XNAS",
+        "date": "2020-07-24T00:00:00+0000"
+      }
+    },
+    "cryptocurrencys": {
+      "btc": {
+        "min": "0.0000011",
+        "max": "0.15797161",
+        "average": "0.00028595",
+        "min_fee_per_byte": "0.00000001",
+        "average_fee_per_byte": "0.00000049",
+        "max_fee_per_byte": "0.0000574",
+        "average_bytes": "583",
+        "recommended": "0.00024282",
+        "slow_fee_per_byte": "0.00000112",
+        "standard_fee_per_byte": "0.00000224",
+        "fast_fee_per_byte": "0.00000352",
+        "unit": "btc",
+        "quantity_per_amount": 15797161000.000002
+      },
+      "doge": {
+        "min": "0.00000192",
+        "max": "80.00000002",
+        "average": "1.40016423",
+        "min_fee_per_byte": "0.00000001",
+        "average_fee_per_byte": "0.00324723",
+        "max_fee_per_byte": "0.23166023",
+        "average_bytes": "431",
+        "recommended": "1.19013926",
+        "slow_fee_per_byte": "0.00150224",
+        "standard_fee_per_byte": "0.00257028",
+        "fast_fee_per_byte": "0.00512631",
+        "unit": "doge",
+        "quantity_per_amount": 8000000002000.0
+      },
+      "ltc": {
+        "min": "0.0000011",
+        "max": "0.1",
+        "average": "0.00023385",
+        "min_fee_per_byte": "0.00000001",
+        "average_fee_per_byte": "0.00000047",
+        "max_fee_per_byte": "0.00001856",
+        "average_bytes": "502",
+        "recommended": "0.00020055",
+        "slow_fee_per_byte": "0.00000079",
+        "standard_fee_per_byte": "0.00000181",
+        "fast_fee_per_byte": "0.00000502",
+        "unit": "ltc",
+        "quantity_per_amount": 10000000000.0
+      }
+    }
+  },
+  "status": "Ok"
+}
