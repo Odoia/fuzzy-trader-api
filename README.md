@@ -1,24 +1,44 @@
-# README
+# Github Fuzzy Trader Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+This API allows to create an investment portfolio and also obtain a list with all investments made in the api showing its total value by the amount of investments.
+It uses Ruby 2.7.1, Rails 6 and it is needed Postgres 12.
 
-* Ruby version
+# What do you need to run the project
 
-* System dependencies
+Clone this project and run those commands in sequence:
 
-* Configuration
+* bundle install
+* rails db:create
+* rails db:migrate
+* rails s
 
-* Database creation
+# API documentation
 
-* Database initialization
+[API mind map](http://www.xmind.net/m/DasHiM)
 
-* How to run the test suite
+# How it works
 
-* Services (job queues, cache servers, search engines, etc.)
+* Put the get path (**'(your url)/api/v1/investment'**) and pass in body a value.
+* see all the investments you can make with the amount informed.
+* Put the post path (**'(your url)/api/v1/wallet'**) and pass in body a paper and quantity.
+* Put the get path (**'(your url)/api/v1/wallet'**) to see all investiments and values in wallet.
 
-* Deployment instructions
+# How to get investments
+## To get a investments for an informed value: 
+### You need to access 'GET: api/v1/investment' route passing a value in USD. 
 
-* ...
+# How to Post Wallet
+## To post a investment on wallet:
+### You need to access 'POST: api/v1/wallet' route passing a paper and quantity. 
+
+# How to Get Wallet
+## To get all investment on wallet:
+### You need to access 'Get: api/v1/wallet'. 
+
+# TODO list (improvements for the future):
+
+* Add a mock tests.
+* Add a register user.
+* Add a money in account user.
+* Add a autenticate to user.
