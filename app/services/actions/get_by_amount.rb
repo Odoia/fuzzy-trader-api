@@ -19,10 +19,15 @@ module Services
         all_actions.each do |action|
           res = action['data'].first
           if res['high'] <= amount
-            result[res['symbol']] = res
+            res['quantity_per_amount'] = quantity_per_amount(quantity: res['high'])
+            result[res['symbol']] = ::Presenters::Action.new(res)
           end
         end
         result
+      end
+
+      def quantity_per_amount(quantity:)
+        (amount / quantity.to_f)
       end
 
       def all_actions

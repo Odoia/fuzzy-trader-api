@@ -15,10 +15,8 @@ module Services
       attr_reader :amount
 
       def all_investiments_per_amount
-        {
-          actions: actions,
-          cryptocurrencys: cryptocurrencys
-        }
+        result = {}
+        result.merge(actions, cryptocurrencys)
       end
 
       def actions

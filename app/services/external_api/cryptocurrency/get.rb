@@ -3,21 +3,25 @@ module Services
     module Cryptocurrency
       class Get
 
-        def initialize
+        def initialize(paper: nil)
+          @paper = paper
         end
 
         def call
-          all_cryptocurrency
+          return all_cryptocurrency if paper.nil?
+
+          one_cryptocurrency
         end
 
         private
+
+        attr_reader :paper
 
         def cryptocurrency
           ['BTC','DOGE','LTC']
         end
 
         def all_cryptocurrency
-
           cryptocurrency.map do |crypto|
             result = Faraday.new(
               url: url(crypto),
@@ -28,6 +32,17 @@ module Services
             ).get
             JSON.parse(result.body)
           end
+        end
+
+        def one_cryptocurrency
+          result = Faraday.new(
+            url: url(paper),
+            headers: { 
+              'ACCEPT' => 'application/json',
+              :Authorization => "bearer #{token}"
+            }
+          ).get
+          JSON.parse(result.body)
         end
 
         def token

@@ -3,14 +3,19 @@ module Services
     module Actions
       class Get
 
-        def initialize
+        def initialize(paper: nil)
+          @paper = paper
         end
 
         def call
-          all_actions
+          return all_actions if paper.nil?
+
+          one_action
         end
 
         private
+
+        attr_reader :paper
 
         def actions
           ['AAPL','IBM','PBR','AMZN','MSFT']
@@ -21,6 +26,11 @@ module Services
             result = Faraday.get(url(paper))
             JSON.parse(result.body)
           end
+        end
+
+        def one_action
+          result = Faraday.get(url(paper))
+          JSON.parse(result.body)
         end
 
         def url(paper)

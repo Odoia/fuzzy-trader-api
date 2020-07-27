@@ -10,33 +10,30 @@ describe '::Api::V1::InvestmentController', type: :request do
   let(:invalid_param) { { value: 'aaaa' } }
 
   context 'When need search a investiment' do
-    context 'When need a 1000 investiment' do
-      it 'shoud be a 4 actions and 3 cryptocurrencys investment' do
+    context 'When need a 1000 USD investiment' do
+      it 'shoud be return 7 investments' do
         get '/api/v1/investment', params: param_1000
 
         expect(response.status).to eq 200
-        expect(body['data']['actions'].count).to eq 4
-        expect(body['data']['cryptocurrencys'].count).to eq 3
+        expect(body['data'].count).to eq 7
       end
     end
 
-    context 'When need a 100 investiment' do
-      it 'shoud be a 1 action and 3 cryptocurrencys investment' do
+    context 'When need a 100 USD investiment' do
+      it 'shoud be return 4 investments' do
         get '/api/v1/investment', params: param_100
 
         expect(response.status).to eq 200
-        expect(body['data']['actions'].count).to eq 1
-        expect(body['data']['cryptocurrencys'].count).to eq 3
+        expect(body['data'].count).to eq 4
       end
     end
 
-    context 'When need a 1 investiment' do
-      it 'shoud be a 0 action and 2 cryptocurrencys investment' do
+    context 'When need a 1 USD investiment' do
+      it 'shoud be return 2 investments' do
         get '/api/v1/investment', params: param_1
 
         expect(response.status).to eq 200
-        expect(body['data']['actions'].count).to eq 0
-        expect(body['data']['cryptocurrencys'].count).to eq 2
+        expect(body['data'].count).to eq 2
       end
     end
 

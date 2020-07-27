@@ -20,7 +20,7 @@ module Services
           res = crypto['payload']
           if res['max'].to_f <= amount
             res['quantity_per_amount'] = quantity_per_amount(quantity: res['max'])
-            result[res['unit']] = res
+            result[res['unit']] = ::Presenters::Cryptocurrency.new(res)
           end
         end
         result
