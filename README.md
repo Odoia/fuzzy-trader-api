@@ -36,6 +36,15 @@ Clone this project and run those commands in sequence:
 ## To get all investment on wallet:
 ### You need to access 'Get: api/v1/wallet'. 
 
+# Requests examples and given returns
+
+1. When user gives the correct parameters for see all investments:
+![](https://github.com/Odoia/fuzzy-trader-api/blob/development/images/get-investments.png)
+2. When user gives the correct parameters for create a wallet:
+![](https://github.com/Odoia/fuzzy-trader-api/blob/development/images/post-wallet.png)
+3. When user see all investments in wallet:
+![](https://github.com/Odoia/fuzzy-trader-api/blob/development/images/post-wallet.png)
+
 # TODO list (improvements for the future):
 
 * Add a mock tests.
